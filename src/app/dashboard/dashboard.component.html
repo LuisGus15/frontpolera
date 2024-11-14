@@ -1,0 +1,32 @@
+<!-- dashboard.component.html --> 
+<div class="dashboard-container"> 
+  <!-- Sidebar --> 
+  <aside class="sidebar"> 
+    <div class="logo"> 
+      <img src="assets/logo.png" alt="Logo"> 
+    </div> 
+    <nav class="sidebar-nav"> 
+      <ul> 
+        <li><a href="https://dashboardtiendapoleras-ndwa44lrqz6kos62mvtfpo.streamlit.app/" target="_blank" rel="noopener noreferrer">Dashboard</a></li> 
+        <li><a [routerLink]="['/productos']" routerLinkActive="active-link">Productos</a></li> 
+        <li><a [routerLink]="['/reportes']" routerLinkActive="active-link">Reportes</a></li> 
+      </ul> 
+    </nav> 
+  </aside> 
+ 
+  <!-- Main Content --> 
+  <main class="main-content"> 
+    <header class="dashboard-header"> 
+      <h1>Dashboard</h1> 
+      <div class="profile-icon"> 
+        <img src="assets/profile-icon.png" alt="Profile"> 
+      </div> 
+    </header> 
+ 
+    <section class="dashboard-charts"> 
+      <div class="chart-placeholder"> 
+        <p>Chart goes here</p> 
+      </div> 
+    </section> 
+  </main> 
+</div>

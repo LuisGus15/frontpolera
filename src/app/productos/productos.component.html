@@ -1,0 +1,53 @@
+<!-- productos.component.html -->
+<div class="productos-container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="logo">
+        <img src="assets/logo.png" alt="Logo"> <!-- Cambia esto por el logo si tienes uno -->
+      </div>
+      <nav class="sidebar-nav">
+        <ul>
+          <li><a [routerLink]="['/dashboard']" routerLinkActive="active-link">Dashboard</a></li>
+          <li><a [routerLink]="['/productos']" routerLinkActive="active-link">Productos</a></li>
+          <li><a [routerLink]="['/reportes']" routerLinkActive="active-link">Reportes</a></li>
+        </ul>
+      </nav>
+    </aside>
+  
+    <!-- Main Content -->
+    <main class="main-content">
+      <!-- Formulario para añadir producto -->
+      <section class="add-product-form">
+        <h2>Añadir Producto</h2>
+        <form>
+          <label for="imagen">Imagen:</label>
+          <input type="text" id="imagen" placeholder="URL de la imagen">
+  
+          <label for="titulo">Título:</label>
+          <input type="text" id="titulo" placeholder="Título del producto">
+  
+          <label for="hash">Hash:</label>
+          <input type="text" id="hash" placeholder="Hash de autenticidad">
+  
+          <label for="certificado">Certificado:</label>
+          <input type="text" id="certificado" placeholder="Número de certificado">
+  
+          <button type="submit">Añadir Producto</button>
+        </form>
+      </section>
+  
+      <!-- Lista de productos -->
+      <section class="product-list">
+        <h2>Lista de Productos</h2>
+        <ul>
+          <li *ngFor="let product of products">
+            <img [src]="product.imagen" alt="Producto">
+            <span>{{ product.titulo }}</span>
+            <button (click)="editProduct(product)">✏️</button>
+            <button (click)="deleteProduct(product)">🗑️</button>
+          </li>
+        </ul>
+      </section>
+    </main>
+  </div>
+  
